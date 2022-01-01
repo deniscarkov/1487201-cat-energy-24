@@ -1,0 +1,32 @@
+/*blocks/present.less*/
+.present__wrapper {
+  position: relative;
+  margin: 35px 20px;
+}
+
+.present__wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(104, 183, 56, 0.85);
+}
+
+.present__image {
+  display: block;
+}
+
+.present__text {
+  margin: 0;
+  position: absolute;
+  top: 187px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
