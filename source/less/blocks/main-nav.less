@@ -1,9 +1,67 @@
 /*blocks/main-nav.less*/
+.main-nav {
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+  }
+}
+
+.main-nav--homepage {
+  @media (min-width: @desktop-width) {
+    min-height: 694px;
+    grid-row: 1/3;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/promo-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 720px 694px;
+  }
+}
+
 .main-nav__wrapper {
-  display: none;
+  display: block;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
+    margin-left: 130px;
+    margin-right: 110px;
+  }
+}
+
+.main-nav__item {
+  border-top: 1px solid #E6E6E6;
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.main-nav__item:last-child {
+  border-bottom: 1px solid #E6E6E6;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .main-nav__link {
+  display: block;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -12,4 +70,21 @@
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.main-nav__link--homepage {
+  @media (min-width: @desktop-width) {
+    color: #FFFFFF
+  }
 }

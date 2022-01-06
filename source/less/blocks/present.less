@@ -1,10 +1,18 @@
 /*blocks/present.less*/
-.present__wrapper {
+.present {
   position: relative;
-  margin: 35px 20px;
+  margin: 35px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 69px 0 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
-.present__wrapper::before {
+.present::before {
   content: "";
   display: block;
   position: absolute;
@@ -17,6 +25,10 @@
 
 .present__image {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+  }
 }
 
 .present__text {
@@ -29,4 +41,19 @@
   line-height: 20px;
   color: #FFFFFF;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    top: 71px;
+    left: 422px;
+    transform: translateX(0);
+    width: 161px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
 }

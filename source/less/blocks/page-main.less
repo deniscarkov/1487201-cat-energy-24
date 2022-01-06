@@ -7,6 +7,15 @@
 .page-main__wrapper {
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin-bottom: 86px;
+  }
 }
 
 .page-main__title {
@@ -17,4 +26,9 @@
   line-height: 36px;
   color: #000000;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

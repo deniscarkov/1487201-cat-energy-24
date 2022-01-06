@@ -1,15 +1,41 @@
 /*blocks/page-footer.less*/
+
 .page-footer__wrapper-contacts {
   width: 320px;
   margin: 0 auto;
   padding: 26px 20px 26px 20px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: @desktop-width;
+    padding: 0;
+  }
 }
 
 .page-footer__contacts {
   display: flex;
   flex-wrap: wrap;
   word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    padding: 56px 80px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
 }
 
 .page-footer--secondary-page {
@@ -28,11 +54,22 @@
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 172px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .page-footer__address {
   margin: 0;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+    font-size: 16px;
+  }
 }
 
 .page-footer__wrapper-background {
@@ -42,10 +79,27 @@
 .page-footer__wrapper {
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .page-footer__map-image {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .page-footer__list {
@@ -59,14 +113,34 @@
   padding-left: 20px;
   padding-right: 20px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 63px 30px 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 63px 110px;
+  }
 }
 
 .page-footer__item:not(:last-child) {
   border-bottom: 1px solid #D9D9D9;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .page-footer__logo {
   text-align: center;
   padding-top: 39px;
   padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
