@@ -2,21 +2,24 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин фитнес еды для котов "Кэт энерджи"</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header page-header--secondary-page">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/logo-icon.svg" width="33" height="38" alt="Интернет-магазин фитнес еды для котов Кэт энерджи">
-      </a>
-      <a class="page-header__logo-text" href="#">
-        <img class="page-header__logo-text-image" src="img/logo-text-header.svg" width="101" height="18" alt="">
-      </a>
-      <nav class="main-nav">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="#">
+          <img class="page-header__logo-image" src="img/logo-icon.svg" width="33" height="38" alt="Интернет-магазин фитнес еды для котов Кэт энерджи">
+        </a>
+        <a class="page-header__logo-text" href="#">
+          <img class="page-header__logo-text-image" src="img/logo-text-header.svg" width="101" height="18" alt="">
+        </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
@@ -42,51 +45,53 @@
       <section class="programm">
         <div class="programm__wrapper">
           <h1 class="page-main__title programm__title">Подбор программы</h1>
-          <p class="programm__instruction">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <p class="programm__instruction">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
           <form class="programm__form form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="form__group form__group--border-bottom">
-              <legend class="visually-hidden">Информация о коте</legend>
-              <ul class="form__list form__list--info">
-                <li class="form__item form__name">
-                  <label for="name">Имя*</label>
-                  <input type="text" id="name" name="name" placeholder="Барсик" required>
-                </li>
-                <li class="form__item form__weight">
-                  <label for="weight">Вес (кг):*</label>
-                  <input type="text" id="weight" name="weight" placeholder="7" required>
-                </li>
-                <li class="form__item form__age">
-                  <label for="age">Возраст (лет):</label>
-                  <input type="text" id="age" name="age" placeholder="7">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form__group form__group--border-bottom">
-              <legend class="visually-hidden">Программы</legend>
-              <ul class="form__list form__list--programms">
-                <li class="form__item control">
-                  <label class="control__label">
-                    <input class="control__input" type="radio" name="programme" value="slimming" checked>
-                    <span class="control__mark"></span>
-                    <span class="control__text">Похудение</span>
-                  </label>
-                </li>
-                <li class="form__item control">
-                  <label class="control__label">
-                    <input class="control__input" type="radio" name="programme" value="weight-gain">
-                    <span class="control__mark"></span>
-                    <span class="control__text">Набор массы</span>
-                  </label>
-                </li>
-                <li class="form__item control">
-                  <label class="control__label">
-                    <input class="control__input" type="radio" name="programme" value="need-advice">
-                    <span class="control__mark"></span>
-                    <span class="control__text">Не знаю (нужен Ваш совет)</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+            <div class="form__wrapper">
+              <fieldset class="form__group">
+                <legend class="visually-hidden">Информация о коте</legend>
+                <ul class="form__list form__list--info">
+                  <li class="form__item form__name">
+                    <label for="name">Имя*</label>
+                    <input type="text" id="name" name="name" placeholder="Барсик" required>
+                  </li>
+                  <li class="form__item form__weight">
+                    <label for="weight">Вес (кг):*</label>
+                    <input type="text" id="weight" name="weight" placeholder="7" required>
+                  </li>
+                  <li class="form__item form__age">
+                    <label for="age">Возраст (лет):</label>
+                    <input type="text" id="age" name="age" placeholder="7">
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="form__group">
+                <legend class="visually-hidden">Программы</legend>
+                <ul class="form__list form__list--programms">
+                  <li class="form__item control">
+                    <label class="control__label">
+                      <input class="control__input" type="radio" name="programme" value="slimming" checked>
+                      <span class="control__mark"></span>
+                      <span class="control__text">Похудение</span>
+                    </label>
+                  </li>
+                  <li class="form__item control">
+                    <label class="control__label">
+                      <input class="control__input" type="radio" name="programme" value="weight-gain">
+                      <span class="control__mark"></span>
+                      <span class="control__text">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="form__item control">
+                    <label class="control__label">
+                      <input class="control__input" type="radio" name="programme" value="need-advice">
+                      <span class="control__mark"></span>
+                      <span class="control__text">Не знаю (нужен Ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+          </div>
             <fieldset class="form__group">
               <legend class="form__title">Контактные данные (владельца кота)</legend>
               <ul class="form__list form__list--contacts">
@@ -105,7 +110,7 @@
               <textarea class="form__comment" name="comments" id="comments" cols="35" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
             <fieldset class="form__group">
-              <legend class="form__title">Дополнительно</legend>
+              <legend class="form__title form__title--extra">Дополнительно</legend>
               <ul class="form__list form__list--extra">
                 <li class="form__item control">
                   <label class="control__label">
@@ -137,9 +142,11 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="form-button button" type="submit">Отправить заявку</button>
+            <div class="form__button-wrapper">
+              <button class="form__button button" type="submit">Отправить заявку</button>
+              <p class="programm__annotation">* — Обязательные поля</p>
+            </div>
           </form>
-          <p class="programm__annotation">* — Обязательные поля</p>
         </div>
       </section>
     </main>

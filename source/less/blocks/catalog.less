@@ -1,10 +1,40 @@
 /*blocks/catalog.less*/
+.catalog {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    margin-bottom: 75px;
+  }
+}
+
 .catalog__title {
   margin: 27px 20px 41px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 90px;
+    text-align: left;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    row-gap: 68px;
+    column-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 245px 245px 245px 245px;
+    row-gap: 63px;
+    column-gap: 80px;
+  }
 }
