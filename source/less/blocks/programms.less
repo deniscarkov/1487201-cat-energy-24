@@ -1,17 +1,13 @@
 /*blocks/programms.less*/
 .programms__wrapper {
-  width: 320px;
-  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
     padding: 0 30px 45px;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
     padding: 0 110px;
     margin-bottom: 71px;
   }
@@ -41,8 +37,57 @@
 }
 
 .programms__item {
-  padding: 30px 20px 20px 20px;
+  position: relative;
+  padding: 30px 20px 10px 20px;
   background-color: #F2F2F2;
+
+  &--slim::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/cat-slim-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 81px;
+      left: auto;
+      right: 62px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 41px;
+      left: 52px;
+      right: auto;
+    }
+  }
+
+  &--pro::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../img/cat-pro-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 91px;
+      left: auto;
+      right: 28px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 47px;
+      left: 33px;
+      right: auto;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 77px 316px 57px 52px;
@@ -50,13 +95,14 @@
 
   @media (min-width: @desktop-width) {
     width: 570px;
-    padding: 41px 51px 59px 51px;
+    padding: 77px 51px 59px 51px;
   }
 }
 
 .programms__title {
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 71px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -66,8 +112,14 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 24px;
+    padding-left: 0;
     font-size: 36px;
-    line-height: 36px
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 163px;
+    margin-bottom: 73px;
   }
 }
 
@@ -77,16 +129,25 @@
   border-bottom: 1px solid #D9D9D9;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 52px;
+    margin-bottom: 42px;
+    padding-bottom: 0;
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 17px;
+  }
 }
 
 .programms__link {
+  position: relative;
   display: inline-block;
-  margin-top: 19px;
+  margin-top: 9px;
+  padding-top: 10px;
+  padding-right: 49px;
+  padding-bottom: 10px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -97,5 +158,39 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-right: 49px;
+    padding-bottom: 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    background-image: url("../img/row-short.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  &:hover::before {
+    background-image: url("../img/row-long.svg");
+  }
+
+  &:focus {
+    outline: 1px solid #000000;
+    border-radius: 1px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  &:active::before {
+    background-image: url("../img/row-long.svg");
   }
 }

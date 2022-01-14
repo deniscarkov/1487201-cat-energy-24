@@ -14,13 +14,32 @@
 
 .present::before {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: block;
   background: rgba(104, 183, 56, 0.85);
+}
+
+.present::after {
+  content: "";
+  position: absolute;
+  top: 59px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/present-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 77px;
+    transform: none;
+  }
 }
 
 .present__image {
@@ -28,6 +47,11 @@
 
   @media (min-width: @tablet-width) {
     height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
   }
 }
 
@@ -44,8 +68,9 @@
 
   @media (min-width: @tablet-width) {
     top: 71px;
-    left: 422px;
-    transform: translateX(0);
+    left: auto;
+    right: 124px;
+    transform: none;
     width: 161px;
     text-align: left;
   }
