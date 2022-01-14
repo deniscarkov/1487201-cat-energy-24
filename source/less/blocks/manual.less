@@ -1,12 +1,10 @@
 /*blocks/manual.less*/
 .manual__wrapper {
-  width: 320px;
   margin: 0 auto;
   padding: 0 20px 49px 20px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
     padding: 0 30px 47px;
     border-bottom: 1px solid #E6E6E6;
   }
@@ -25,18 +23,88 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(280px, 1fr));
+    column-gap: 137px;
+    row-gap: 37px;
   }
 
   @media (min-width: @desktop-width) {
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    column-gap: 80px;
   }
 }
 
 .manual__item {
+  position: relative;
+  min-height: 60px;
+  margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 40px;
+    }
+  }
+
+  &--point-one::before {
+    background-image: url("../img/manual-point-one.svg");
+  }
+
+  &--point-two::before {
+    background-image: url("../img/manual-point-two.svg");
+  }
+
+  &--point-three::before {
+    background-image: url("../img/manual-point-three.svg");
+  }
+
+  &--point-four::before {
+    background-image: url("../img/manual-point-four.svg");
+  }
+
   @media (min-width: @tablet-width) {
-    width: 224px;
+    min-height: 280px;
+    margin-bottom: 0;
+    padding-top: 150px;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 280px;
+      line-height: 280px;
+      color: #F2F2F2;
+      z-index: -1;
+    }
+
+    &--point-one::after {
+      content: "1";
+    }
+
+    &--point-two::after {
+      content: "2";
+    }
+
+    &--point-three::after {
+      content: "3";
+    }
+
+    &--point-four::after {
+      content: "4";
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -44,18 +112,12 @@
   }
 }
 
-.manual__item:not(:nth-child(2n)) {
-  @media (min-width: @tablet-width) {
-    margin-right: 154px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 0;
-  }
-}
-
 .manual__description {
+  margin: 0;
+  padding-left: 80px;
+
   @media (min-width: @tablet-width) {
+    padding-left: 0;
     font-size: 16px;
     line-height: 24px;
   }

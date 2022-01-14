@@ -21,11 +21,38 @@
   color: #444444;
   text-decoration: none;
 
+  &:hover .copyright__icon-image {
+    fill: #68B738;
+  }
+
+  &:focus {
+    outline: 1px solid #000000;
+    border-radius: 1px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active .copyright__icon-image {
+    fill: #68B738;
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 22px;
   }
 }
 
-.copyright__image {
+.copyright__icon-text {
   display: block;
+  fill: #444444;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__icon-image {
+  display: block;
+  fill: #666666;
 }

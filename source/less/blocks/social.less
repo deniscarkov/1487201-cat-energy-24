@@ -5,10 +5,70 @@
   padding-top: 22px;
   padding-bottom: 23px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+}
+
+.social__item {
+  &--vkontakte {
+    margin-right: 17px;
+  }
+
+  &--instagram {
+    margin-right: 19px;
+  }
+}
+
+.social__link {
+  display: block;
+  padding: 10px;
+
+  &--instagram:hover .social__button,
+  &--vkontakte:hover .social__button {
+    fill: #68B738;
+  }
+
+  &--instagram:focus,
+  &--vkontakte:focus {
+    outline: 1px solid #000000;
+    border-radius: 1px;
+  }
+
+  &--instagram:active .social__button,
+  &--vkontakte:active .social__button {
+    fill: #68B738;
+    opacity: 0.3;
+  }
+
+  &--facebook:hover .social__button {
+    stroke: #68B738;
+  }
+
+  &--facebook:focus {
+    outline: 1px solid #000000;
+    border-radius: 1px;
+  }
+
+  &--facebook:active .social__button {
+    stroke: #68B738;
+    opacity: 0.3;
+  }
+}
+
+.social__button {
+  &--instagram,
+  &--vkontakte {
+    fill: #666666;
+  }
+
+  &--facebook {
+    stroke: #666666;
+    stroke-width: 1.1;
   }
 }
