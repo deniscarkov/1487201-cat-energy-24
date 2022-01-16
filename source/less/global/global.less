@@ -80,6 +80,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 
   &:hover .button-text {
     opacity: 0.6;
@@ -108,8 +109,24 @@ body {
   }
 }
 
+label {
+  cursor: pointer;
+}
+
 input[type="text"]::-webkit-input-placeholder,
 textarea::placeholder {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  color: #444444;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+}
+
+input[type="text"]::-moz-placeholder {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   color: #444444;

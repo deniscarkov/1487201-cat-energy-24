@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин фитнес еды для котов "Кэт энерджи"</title>
@@ -10,7 +15,11 @@
     <header class="page-header page-header--nojs">
       <div class="page-header__wrapper">
         <a class="page-header__logo-link page-header__logo" href="#">
-          <img class="page-header__logo-image" src="img/logo-icon.svg" width="33" height="38" alt="Интернет-магазин фитнес еды для котов Кэт энерджи">
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Интернет-магазин фитнес еды для котов Кэт энерджи">
+          </picture>
         </a>
         <a class="page-header__logo-link page-header__logo-text" href="#">
           <img class="page-header__logo-text-image" src="img/logo-text-header.svg" width="101" height="18" alt="">
@@ -45,7 +54,11 @@
         <p class="promo__slogan">
           Занялся собой? Займись котом!
         </p>
-        <img class="promo__image" src="img/promo-image.png" width="280" height="270" alt="">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/promo-image-tablet.png 1x, img/promo-image-tablet@2x.png 2x">
+          <img class="promo__image" src="img/promo-image-mobile.png" srcset="img/promo-image-mobile@2x.png 2x" width="280" height="270" alt="">
+        </picture>
         <a class="button promo__button" href="#">
             <span class="button-text">Подобрать программу</span>
         </a>
@@ -156,8 +169,11 @@
             Затраты на питание: <br class="example__word-wrapping"> <span class="example__price">15 000 РУБ.</span>
           </p>
           <div class="example__slider">
-            <img class="example__image example__image--current" src="img/cat-fat.png" width="280" height="232" alt="Кот до диеты.">
-            <img class="example__image" src="img/cat-skinny.png" width="280" height="232" alt="Кот спустя два месяца диеты">
+            <picture>
+              <source media="(min-width:1440px)" srcset="img/cat-tablet-desktop.png 1x,img/cat-tablet-desktop@2x.png 2x">
+              <source media="(min-width:768px)" srcset="img/cat-tablet-desktop.png 1x,img/cat-tablet-desktop@2x.png 2x">
+              <img class="example__image example__image--current" src="img/cat-mobile.png" srcset="img/cat-mobile@2x.png 2x" width="280"height="232" alt="Кот до диеты.">
+            </picture>
             <div class="example__toggle">
               <span class="example__toggle-text">Было</span>
               <div class="example__toggle-button-wrapper">
