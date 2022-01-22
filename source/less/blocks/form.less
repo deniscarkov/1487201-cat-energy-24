@@ -10,6 +10,12 @@
 }
 
 .form__wrapper .form__group {
+  border-bottom: 1px solid #D9D9D9;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 0;
   }
@@ -18,7 +24,7 @@
 .form__group {
   margin: 0;
   margin-bottom: 23px;
-  padding: 0 20px;
+  padding: 0;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -31,24 +37,58 @@
   }
 }
 
-.form__group:nth-child(1),
-.form__group:nth-child(2) {
-  border-bottom: 1px solid #D9D9D9;
+.form__wrapper-title {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    height: 2px;
+    background-color: #68b738;
+    z-index: -1;
+  }
+}
+
+.form__title {
+  width: max-content;
+  background-color: #ffffff;
+  padding-right: 22px;
 
   @media (min-width: @tablet-width) {
-    border-bottom: none;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.form__title-word-wrapping {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .form__list {
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   list-style: none;
+  box-sizing: border-box;
 }
 
 .form__list--info {
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 72px;
   }
@@ -131,6 +171,7 @@
 
 .form__title {
   margin-bottom: 35px;
+  padding-left: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
@@ -216,19 +257,19 @@
 }
 
 .form__item input[type="text"] {
-  width: min-content;
-  flex-grow: 1;
-  margin-left: 8px;
+  //flex-grow: 1;
   padding: 13px 15px;
   padding-right: 50px;
   line-height: 18px;
   border: none;
   outline: 1px solid #e7e7e7;
   box-sizing: border-box;
+  width: 100%;
 
   &:hover {
     outline-color: #cdcdcd;
   }
+
 
   &:focus {
     outline: 2px solid #444444;
@@ -248,8 +289,28 @@
   }
 }
 
+input[type="text"] {
+  &:focus + .form__icon-email {
+    stroke: #68B738;
+  }
+
+  &:focus + .form__icon-phone {
+    fill: #68B738;
+  }
+
+  &.error + .form__icon-email {
+    stroke: #FF8282;
+  }
+
+  &.error + .form__icon-phone {
+    fill: #FF8282;
+  }
+}
+
 .form__item label {
   width: max-content;
+  padding-right: 11px;
+  flex-shrink: 0;
 }
 
 .form__comment {
@@ -299,4 +360,8 @@
   @media (min-width: @desktop-width) {
     width: 100%;
   }
+}
+
+.form__wrapper-textarea {
+  padding: 0 20px;
 }

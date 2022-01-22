@@ -61,14 +61,30 @@
   }
 }
 
-.social__button {
-  &--instagram,
-  &--vkontakte {
-    fill: #666666;
-  }
+.social__button--vkontakte {
+  fill: #666666;
 
-  &--facebook {
-    stroke: #666666;
-    stroke-width: 1.1;
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__button--instagram {
+  fill: #666666;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__button--facebook {
+  stroke: #666666;
+  stroke-width: 1.1;
+
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 33px;
   }
 }
