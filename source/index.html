@@ -9,7 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин фитнес еды для котов "Кэт энерджи"</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/script.js"></script>
   </head>
   <body class="page__body">
 
@@ -65,30 +66,6 @@
         </a>
       </section>
     </header>
-
-    <script>
-      var pageHeader = document.querySelector('.page-header');
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav-toggle');
-
-      pageHeader.classList.remove('page-header--nojs');
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-          navToggle.classList.remove('main-nav-toggle--closed');
-          navToggle.classList.add('main-nav-toggle--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-          navToggle.classList.add('main-nav-toggle--closed');
-          navToggle.classList.remove('main-nav-toggle--opened');
-        }
-      })
-    </script>
-
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котов "Кэт энерджи"</h1>
 
@@ -224,7 +201,7 @@
                 <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
                   <span class="visually-hidden">Мы в Вконтакте</span>
                   <svg class="social__button social__button--vkontakte" aria-hidden="true" focusable="false" width="23" height="16">
-                    <use xLink:href="img/sprite.svg#icon-vkontakte"></use>
+                    <use xLink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
@@ -232,7 +209,7 @@
                 <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
                   <span class="visually-hidden">Мы в Инстаграме</span>
                   <svg class="social__button social__button--instagram" aria-hidden="true" focusable="false" width="16" height="16">
-                    <use xLink:href="img/sprite.svg#icon-instagram"></use>
+                    <use xLink:href="img/sprite.svg#inst"></use>
                   </svg>
                 </a>
               </li>
@@ -240,7 +217,7 @@
                 <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
                   <span class="visually-hidden">Мы в Фейсбуке</span>
                   <svg class="social__button social__button--facebook" aria-hidden="true" focusable="false" width="22" height="22" fill="none">
-                    <use xLink:href="img/sprite.svg#icon-facebook"></use>
+                    <use xLink:href="img/sprite.svg#fb"></use>
                   </svg>
                 </a>
               </li>
@@ -251,14 +228,14 @@
                 <li class="copyright__item">
                   <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
                     <svg class="copyright__icon-text" aria-hidden="true" focusable="false" width="114" height="18">
-                      <use xLink:href="img/sprite.svg#copyright-icon-text"></use>
+                      <use xLink:href="img/sprite.svg#text-copyright"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="copyright__item">
                   <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
                     <svg class="copyright__icon-image" aria-hidden="true" focusable="false" width="27" height="34">
-                      <use xLink:href="img/sprite.svg#copyright-icon-image"></use>
+                      <use xLink:href="img/sprite.svg#logo-copyright"></use>
                     </svg>
                   </a>
               </li>
