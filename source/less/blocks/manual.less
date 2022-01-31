@@ -1,7 +1,13 @@
 /*blocks/manual.less*/
+.manual {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
 .manual__wrapper {
   margin: 0 auto;
-  padding: 0 20px 49px 20px;
+  padding: 0 20px 29px 20px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -11,7 +17,6 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    margin-bottom: 71px;
     padding: 0 110px;
     border-bottom: none;
   }
@@ -26,7 +31,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(280px, 1fr));
-    column-gap: 137px;
+    column-gap: 60px;
     row-gap: 37px;
   }
 
@@ -38,8 +43,9 @@
 
 .manual__item {
   position: relative;
+  margin: 0;
   min-height: 60px;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
@@ -56,7 +62,7 @@
       top: 40px;
       width: 80px;
       height: 80px;
-      background-size: 80px 80px;
+      background-color: #68b738;
     }
   }
 
@@ -86,7 +92,7 @@
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
+      font-family: "Oswald", "Arial", sans-serif;
       font-size: 280px;
       line-height: 280px;
       color: #F2F2F2;
@@ -95,18 +101,22 @@
 
     &--point-one::after {
       content: "1";
+      left: 120px;
     }
 
     &--point-two::after {
       content: "2";
+      left: 110px;
     }
 
     &--point-three::after {
       content: "3";
+      left: 115px;
     }
 
     &--point-four::after {
       content: "4";
+      left: 115px;
     }
   }
 
@@ -120,8 +130,15 @@
   padding-left: 80px;
 
   @media (min-width: @tablet-width) {
+    width: 245px;
     padding-left: 0;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.manual__item-word-wrapping {
+  @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }

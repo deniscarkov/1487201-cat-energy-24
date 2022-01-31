@@ -5,6 +5,10 @@
   display: inline-block;
   padding: 6px 0;
   padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .control__mark {
@@ -17,6 +21,11 @@
   height: 30px;
   box-sizing: border-box;
   border: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 
   &:hover {
     border-color: #bababa;
@@ -42,6 +51,11 @@
   height: 14px;
   border-radius: 50%;
   background-color: #68b738;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .control__input[type="checkbox"]:checked + .control__mark::before {

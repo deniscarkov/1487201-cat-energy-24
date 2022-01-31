@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин фитнес еды для котов "Кэт энерджи"</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
 
@@ -47,6 +49,7 @@
       </nav>
     </header>
 
+    <!--
     <script>
       var pageHeader = document.querySelector('.page-header');
       var navMain = document.querySelector('.main-nav');
@@ -69,6 +72,7 @@
         }
       })
     </script>
+    -->
 
     <main class="page-main">
       <section class="programm">
@@ -81,7 +85,7 @@
                 <legend class="visually-hidden">Информация о коте</legend>
                 <ul class="form__list form__list--info">
                   <li class="form__item form__name">
-                    <label for="name">Имя*</label>
+                    <label for="name">Имя:*</label>
                     <input type="text" id="name" name="name" placeholder="Барсик" required>
                   </li>
                   <li class="form__item form__weight">
@@ -127,7 +131,7 @@
               </legend>
               <ul class="form__list form__list--contacts">
                 <li class="form__item form__email">
-                  <label for="email">E-mail*</label>
+                  <label for="email">E-mail:*</label>
                   <input type="text" id="email" name="email" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__icon-email" aria-hidden="true" focusable="false" width="20" height="14" fill="none" stroke="#222222">
                     <use xLink:href="img/sprite.svg#email"></use>
@@ -147,7 +151,7 @@
                 <div class="form__title">Комментарий</div>
               </legend>
               <div class="form__wrapper-textarea">
-                <textarea class="form__comment" name="comments" id="comments" cols="35" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <textarea class="form__comment" name="comments" id="comments" cols="35" rows="3" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </fieldset>
             <fieldset class="form__group">
@@ -276,5 +280,6 @@
     </div>
 
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
