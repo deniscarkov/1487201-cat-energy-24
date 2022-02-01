@@ -58,39 +58,16 @@
           Занялся собой? Займись котом!
         </p>
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/promo-image-tablet.png 1x, img/promo-image-tablet@2x.png 2x">
-          <img class="promo__image" src="img/promo-image-mobile.png" srcset="img/promo-image-mobile@2x.png 2x" width="280" height="270" alt="">
+          <source media="(min-width: 1440px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x" >
+          <source media="(min-width: 1440px)" srcset="img/promo-image-desktop.webp 1x, img/promo-image-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/promo-image-tablet.png 1x, img/promo-image-tablet@2x.png 2x, img/promo-image-tablet.webp 1x, img/promo-image-tablet@2x.webp 2x">
+          <img class="promo__image" src="img/promo-image-mobile.png" srcset="img/promo-image-mobile@2x.png 2x, img/promo-image-mobile.webp 1x, img/promo-image-mobile@2x.webp 2x" width="280" height="270" alt="">
         </picture>
         <a class="button promo__button" href="#">
             <span class="button-text">Подобрать программу</span>
         </a>
       </section>
     </header>
-    <!--
-    <script>
-      var pageHeader = document.querySelector('.page-header');
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav-toggle');
-
-      pageHeader.classList.remove('page-header--nojs');
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-          navToggle.classList.remove('main-nav-toggle--closed');
-          navToggle.classList.add('main-nav-toggle--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-          navToggle.classList.add('main-nav-toggle--closed');
-          navToggle.classList.remove('main-nav-toggle--opened');
-        }
-      })
-    </script>
-    -->
 
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котов "Кэт энерджи"</h1>
