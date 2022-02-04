@@ -102,19 +102,19 @@
             </div>
             <fieldset class="form__group">
               <legend class="form__wrapper-title">
-                <div class="form__title">Контактные данные <br class="form__title-word-wrapping">(владельца кота)</div>
+                <h2 class="form__title">Контактные данные <span class="form__title-word-wrapping"><br></span>(владельца кота)</h2>
               </legend>
               <ul class="form__list form__list--contacts">
                 <li class="form__item form__email">
                   <label for="email">E-mail:*</label>
-                  <input type="text" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__icon-email" aria-hidden="true" focusable="false" width="20" height="14" fill="none" stroke="#222222">
                     <use xLink:href="img/sprite.svg#email"></use>
                   </svg>
                 </li>
                 <li class="form__item form__phone">
                   <label for="phone">Телефон:*</label>
-                  <input type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                  <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
                   <svg class="form__icon-phone" aria-hidden="true" focusable="false" width="20" height="20" fill="black">
                     <use xLink:href="img/sprite.svg#phone"></use>
                   </svg>
@@ -123,7 +123,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend class="form__wrapper-title">
-                <div class="form__title">Комментарий</div>
+                <h2 class="form__title">Комментарий</h2>
               </legend>
               <div class="form__wrapper-textarea">
                 <textarea class="form__comment" name="comments" id="comments" cols="35" rows="3" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -131,7 +131,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend class="form__wrapper-title">
-                <div class="form__title">Дополнительно</div>
+                <h2 class="form__title form__title--extra">Дополнительно</h2>
               </legend>
               <ul class="form__list form__list--extra">
                 <li class="form__item control">
@@ -179,7 +179,7 @@
       <div class="page-footer__wrapper-contacts">
         <div class="page-footer__contacts">
           <h2 class="page-footer__contacts-content page-footer__title">Приглашаем <br> к сотрудничеству <br> дилеров!</h2>
-          <p class="page-footer__contacts-content page-footer__address">ул. Большая <br> Конюшенная, д. 19/8 <br> <br class="page-footer__address-word-wrapping"> Санкт-Петербург</p>
+          <p class="page-footer__contacts-content page-footer__address">ул. Большая <br> Конюшенная, д. 19/8 <br> <span class="page-footer__address-word-wrapping">Санкт-Петербург</span></p>
         </div>
       </div>
       <div class="page-footer__wrapper-background">
@@ -188,11 +188,20 @@
             <iframe
               class="page-footer__map-image"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8301744005817!2d30.314303316007358!3d59.96814048188689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcwMjI!5e0!3m2!1sru!2sru!4v1641631713744!5m2!1sru!2sru"
-              width="100%"
+              style="width: 100%;"
               height="362"
               allowfullscreen
               title="Карта с расположением магазина"
-            ></iframe>
+            >
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+                <source media="(min-width:1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+                <source media="(min-width:768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+                <img class="page-footer__map-static" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="362" alt="Карта с расположением магазина">
+              </picture>
+            </iframe>
           </div>
 
           <ul class="page-footer__list">
