@@ -168,21 +168,12 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-    margin-top: 0;
-    padding-top: 10px;
-    padding-right: 49px;
-    padding-bottom: 10px;
-  }
-
   &::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -7px;
+    right: 0;
     width: 32px;
     background-image: url("../img/row-short.svg");
     background-repeat: no-repeat;
@@ -205,5 +196,19 @@
 
   &:active::before {
     background-image: url("../img/row-long.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-right: 49px;
+    padding-bottom: 10px;
+
+    &::before {
+      content: "";
+      right: -10px;
+    }
   }
 }

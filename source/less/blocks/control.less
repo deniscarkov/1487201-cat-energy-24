@@ -58,6 +58,10 @@
   }
 }
 
+.control__input[type="radio"]:focus + .control__mark {
+  border-color: #000000;
+}
+
 .control__input[type="checkbox"]:checked + .control__mark::before {
   position: absolute;
   content: "";
@@ -67,6 +71,10 @@
   width: 18px;
   height: 14px;
   background-image: url("../img/tick.svg");
+}
+
+.control__input[type="checkbox"]:focus + .control__mark {
+  border-color: #000000;
 }
 
 .control__input:disabled + .control__mark {
