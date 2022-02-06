@@ -1,4 +1,10 @@
-.page-header {
+.page-header--homepage {
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to right, #ffffff 50%, #64a73c 50%);
+  }
+}
+
+.page-header__container {
   width: 100%;
   box-sizing: border-box;
 
@@ -9,7 +15,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 10px;
+    width: @desktop-width;
+    margin: 0 auto;
     padding: 0;
     grid-template-rows: 112px auto;
     grid-template-columns: 720px 720px;

@@ -23,7 +23,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px 0 73px;
+    padding: 0;
+  }
+}
+
+.additionally__title-container {
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 110px 0 70px;
+    box-sizing: border-box;
   }
 }
 
@@ -56,10 +65,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 0;
+    width: @desktop-width;
+    margin: 0 auto;
+    margin-bottom: 85px;
     padding: 0 110px;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 }
 

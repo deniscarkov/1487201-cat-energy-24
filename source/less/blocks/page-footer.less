@@ -36,6 +36,7 @@
     padding: 58px 76px 58px 80px;
     box-sizing: border-box;
     background-color: #ffffff;
+    z-index: 1;
   }
 }
 
@@ -94,13 +95,16 @@
 
 .page-footer__wrapper {
   margin: 0 auto;
+}
 
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
+.page-footer__map {
+  position: relative;
 }
 
 .page-footer__map-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   border: none;
 
@@ -114,6 +118,10 @@
 }
 
 .page-footer__map-static {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
   @media (min-width: @tablet-width) {
     height: 400px;
     width: 768px;
@@ -144,7 +152,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
     padding: 50px 110px;
+    box-sizing: border-box;
   }
 }
 
